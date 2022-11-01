@@ -1,9 +1,8 @@
 import abc
 from typing import Optional
 
-from tinkoff.invest import HistoricCandle
-
 from configuration.settings import StrategySettings
+from data_provider.internal_candle import InternalCandle
 from trade_system.signal import Signal
 
 __all__ = ("IStrategy")
@@ -17,5 +16,5 @@ class IStrategy(abc.ABC):
         pass
 
     @abc.abstractmethod
-    def analyze_candle(self, candle: HistoricCandle) -> Optional[Signal]:
+    def analyze_candle(self, candle: InternalCandle) -> Optional[Signal]:
         pass

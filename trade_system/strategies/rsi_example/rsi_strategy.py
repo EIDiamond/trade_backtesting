@@ -5,10 +5,10 @@ from decimal import Decimal
 from typing import Optional
 
 import pandas as pd
-from tinkoff.invest import HistoricCandle
 from tinkoff.invest.utils import quotation_to_decimal
 
 from configuration.settings import StrategySettings
+from data_provider.internal_candle import InternalCandle
 from trade_system.signal import Signal, SignalType
 from trade_system.strategies.base_strategy import IStrategy
 
@@ -65,14 +65,14 @@ class RsiStrategy(IStrategy):
         self.__short_take = Decimal(settings.settings[self.__SHORT_TAKE_NAME])
         self.__short_stop = Decimal(settings.settings[self.__SHORT_STOP_NAME])
 
-        self.__recent_candles: list[HistoricCandle] = []
-        self.__current_candle: Optional[HistoricCandle] = None
+        self.__recent_candles: list[InternalCandle] = []
+        self.__current_candle: Optional[InternalCandle] = None
 
     @property
     def settings(self) -> StrategySettings:
         return self.__settings
 
-    def analyze_candle(self, candle: HistoricCandle) -> Optional[Signal]:
+    def analyze_candle(self, candle: InternalCandle) -> Optional[Signal]:
         """
         The method analyzes candle and returns a decision.
         """
@@ -101,7 +101,7 @@ class RsiStrategy(IStrategy):
 
         return result
 
-    def __update_recent_candles(self, candle: HistoricCandle) -> bool:
+    def __update_recent_candles(self, candle: InternalCandle) -> bool:
         # update 1 minute candle to candle with self.__interval minutes interval
         if len(self.__recent_candles) > 0:
             current_candle = self.__recent_candles[len(self.__recent_candles) - 1]

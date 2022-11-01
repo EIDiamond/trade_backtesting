@@ -1,10 +1,10 @@
 import uuid
 from decimal import Decimal
 
-from tinkoff.invest import MoneyValue, Quotation, Candle, HistoricCandle
+from tinkoff.invest import MoneyValue, Quotation, HistoricCandle
 from tinkoff.invest.utils import quotation_to_decimal, decimal_to_quotation
 
-__all__ = ()
+from data_provider.internal_candle import InternalCandle
 
 
 def rub_currency_name() -> str:
@@ -37,13 +37,13 @@ def generate_order_id() -> str:
     return str(uuid.uuid4())
 
 
-def candle_to_historiccandle(candle: Candle) -> HistoricCandle:
-    return HistoricCandle(
+def historic_candle_to_internal(candle: HistoricCandle) -> InternalCandle:
+    return InternalCandle(
         open=candle.open,
         high=candle.high,
         low=candle.low,
         close=candle.close,
         volume=candle.volume,
-        time=candle.time,
-        is_complete=True
+        time=candle.time
     )
+
