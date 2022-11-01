@@ -18,13 +18,13 @@ The trade strategy is 'set stop to no loss position'.
 ## 2022-10-08
 ### Added
 - 'RsiStrategy' example strategy. Part of example from research project 
-[analyze_market_data_py](https://github.com/EIDiamond/invest-tools/tree/main/research/analyze_market_data_py).  
+[analyze_market_data](https://github.com/EIDiamond/analyze_market_data).  
 
 
 ## 2022-09-24
 ### Added
 - 'TinkoffDownloaded' data provider. The provider based on pre-downloaded market data by the 
-[data_collectors/tinkoff_stream_py](https://github.com/EIDiamond/invest-tools/tree/main/data_collectors/tinkoff_stream_py) 
+[tinkoff_market_data_collector](https://github.com/EIDiamond/tinkoff_market_data_collector) 
 project.  
 
 

@@ -34,7 +34,7 @@ class FloatCandle:
 class RsiStrategy(IStrategy):
     """
     Example of trade strategy based on RSI indicator (self-made).
-    Part of example from research project (https://github.com/EIDiamond/invest-tools/tree/main/research/analyze_market_data_py)
+    Part of example from research project [analyze_market_data](https://github.com/EIDiamond/analyze_market_data)
     IMPORTANT: DO NOT USE IT FOR REAL TRADING!
     """
     # Consts for read and parse dict with strategy configuration
