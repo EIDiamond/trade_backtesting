@@ -47,7 +47,6 @@ Detailed settings for test strategy on historical candles.
 - `STRATEGY_NAME` - name of algorithm
 - `TICKER` - ticker name 
 - `FIGI` - figi of stock. Required for API
-- `MAX_LOTS_PER_ORDER` - Maximum count of lots per order
 
 ### Section TEST_STRATEGY_SETTINGS
 Detailed settings for strategy. Strategy class reads and parses settings manually.  

@@ -25,7 +25,6 @@ class ProgramConfiguration:
                 name=config["TEST_STRATEGY"]["STRATEGY_NAME"],
                 figi=config["TEST_STRATEGY"]["FIGI"],
                 ticker=config["TEST_STRATEGY"]["TICKER"],
-                max_lots_per_order=int(config["TEST_STRATEGY"]["MAX_LOTS_PER_ORDER"]),
                 settings=config["TEST_STRATEGY_SETTINGS"]
             )
 

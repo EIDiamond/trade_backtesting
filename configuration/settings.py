@@ -9,7 +9,6 @@ class StrategySettings:
     name: str = ""
     figi: str = ""
     ticker: str = ""
-    max_lots_per_order: int = 1
     # All internal strategy settings are represented as dict. A strategy class have to parse it himself.
     # Here, we avoid any strong dependencies and obligations
     settings: dict = field(default_factory=dict)
