@@ -43,7 +43,7 @@ class ResultViewerToPlot(IResultViewer):
 
             for test_order in test_result.executed_orders:
                 total_commission += self.__commission_calculator.calculate(test_order.open_level) + \
-                                    self.__commission_calculator.calculate(test_order.open_level)
+                                    self.__commission_calculator.calculate(test_order.close_level)
 
                 if test_order.signal.signal_type == SignalType.LONG:
                     # long profit if close > open

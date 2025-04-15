@@ -51,7 +51,7 @@ class ResultViewerToLogs(IResultViewer):
                 logger.info(f"Open: {test_order.open_level}; Close: {test_order.close_level}")
 
                 commission = self.__commission_calculator.calculate(test_order.open_level) + \
-                             self.__commission_calculator.calculate(test_order.open_level)
+                             self.__commission_calculator.calculate(test_order.close_level)
                 total_commission += commission
                 logger.info(f"Commission: {commission}")
 
