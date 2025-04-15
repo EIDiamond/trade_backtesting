@@ -9,6 +9,7 @@ __all__ = ("Signal", "SignalType")
 class SignalType(enum.IntEnum):
     LONG = 0
     SHORT = 1
+    CLOSE = 2
 
 
 @dataclass(eq=False, repr=True)
