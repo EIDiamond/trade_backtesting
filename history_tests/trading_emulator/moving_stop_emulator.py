@@ -119,7 +119,7 @@ class MovingStopEmulator(ITradingEmulator):
                 price_diff = current_price_level - signal.stop_loss_level
                 logger.info(f"New price diff: {price_diff}")
 
-        logger.info(f"Tests completed")
+        logger.info(f"Tests were completed")
 
         return test_result
 

@@ -84,7 +84,7 @@ class StopTakeEmulator(ITradingEmulator):
                 # candle.close is the nearest price level to emulate price of open position
                 test_result.open_position(signal, quotation_to_decimal(candle.close))
 
-        logger.info(f"Tests completed")
+        logger.info(f"Tests were completed")
 
         return test_result
 
